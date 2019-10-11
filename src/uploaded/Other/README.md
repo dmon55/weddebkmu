@@ -1,0 +1,1 @@
+Other type pic
