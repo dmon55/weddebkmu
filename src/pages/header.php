@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $status="";
 ?>
 
 <!doctype html>
@@ -52,12 +53,19 @@
                                     <a class="dropdown-item" href="../pages/gamestore.php">Other Game</a>
                                     </div>
                                 </li>
+                                
                                 <li class="nav-item ">
                                     <a class="nav-link btn-outline-success" href="../pages/staff.php" style="color:#FFFFFF " >Staff</a>
                                 </li>
+                                
                                 <li class="nav-item ">
                                     <a class="nav-link btn-outline-success disabled" href="#" style="color:#FFFFFF " >FAQ</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn-outline-success" href="../pages/cart.php" style="color:#FFFFFF "><img src="../images/cart-icon.png" /> Cart</a>
+                                </li>
+                                
+                                
                                 <?php
                                     if (isset($_SESSION['power'])) {
                                         if($_SESSION['power'] == "2"){
@@ -85,10 +93,15 @@
                                         <a class="nav-link btn-outline-success" style="color:#FFFFFF" href="signup.php" >Signup</a>';
                                     }
                                 ?>
-                            <form action="../pages/search.php" method="post" class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                            </form>
+
+                            
+                        
+                    </div>
+                    <div style="clear:both;"></div>
+                    <div class="message_box" style="margin:10px 0px;">
+                        <?php echo $status; ?>
+                        
+                    </div>
                         </div>
                     </nav>  
                 </div>
